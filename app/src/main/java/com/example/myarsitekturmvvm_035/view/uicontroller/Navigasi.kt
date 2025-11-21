@@ -44,3 +44,14 @@ fun DataSiswa(
                     }
                 )
             }
+            composable(route = Navigasi.Detail.name) {
+                TampilSiswa (
+                    statusUISiswa = uiState.value,
+                    onBackButtonClicked = {
+                        cancelAndBackToFormulir(navController)
+                    }
+                )
+            }
+        }
+    }
+}
