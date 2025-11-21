@@ -48,3 +48,16 @@ fun FormSiswa(
     Scaffold(
         modifier = Modifier,
         topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(id=R.string.home), color = Color.White) },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
+    ){ isiRuang ->
+        Column(
+            modifier = Modifier.padding(paddingValues = isiRuang),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
