@@ -63,3 +63,6 @@ fun TampilSiswa(
                             fontSize = 22.sp
                         )
                     }
+                    HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
+                }
+                Spacer(modifier = Modifier.height(height = 10.dp))
