@@ -34,8 +34,3 @@ fun DataSiswa(
             startDestination = Navigasi.Formulirku.name,
 
             modifier = Modifier.padding(paddingValues = isiRuang)) {
-           ncelAndBackToFormulir(
-    navController: NavHostController
-){
-    navController.popBackStack(route = Navigasi.Formulirku.name, inclusive = false)
-}
