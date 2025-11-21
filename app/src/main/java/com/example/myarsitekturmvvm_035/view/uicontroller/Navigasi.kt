@@ -34,3 +34,13 @@ fun DataSiswa(
             startDestination = Navigasi.Formulirku.name,
 
             modifier = Modifier.padding(paddingValues = isiRuang)) {
+            composable(route = Navigasi.Formulirku.name) {
+                val konteks = LocalContext.current
+                FormSiswa(
+                    pilihanJK = JenisK.map {id -> konteks.resources.getString(id)},
+                    OnSubmitButtonClicked = {
+                        viewModel.setSiswa(it)
+                        navController.navigate(route = Navigasi.Detail.name)
+                    }
+                )
+            }
