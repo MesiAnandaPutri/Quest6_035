@@ -39,3 +39,15 @@ fun TampilSiswa(
         Pair(first = stringResource(id = R.string.alamat), second = statusUISiswa.alamat),
     )
     Scaffold (modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(id = R.string.tampil), color = Color.White)},
+                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
+            )
+        }
+    ){
+            isiRuang->
+        Column (modifier = Modifier.padding(paddingValues = isiRuang)
+            .fillMaxWidth(),
+            verticalArrangement = Arrangement.SpaceBetween,
+            horizontalAlignment = Alignment.CenterHorizontally){
